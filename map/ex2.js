@@ -1,7 +1,6 @@
 /* Array.prototype.map - Exercice 2
 
-Ecrire une fonction getFoodCategories qui reçoit comme un argument un tableau
-d'objets.
+
 Chaque objet a deux propriétés:
   - `food` le nom d'un produit alimentaire
   - `isVegetarian` un booléen indiquant si le produit convient aux végétariens
@@ -43,6 +42,10 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+  return foods.map(bouf => {
+    const veg = bouf.isVegetarian === true? ' is suitable for vegetarians' : ' is not suitable for vegetarians'
+    return bouf.food + veg
+  })
 }
 
 

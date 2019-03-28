@@ -21,8 +21,13 @@ Sortie attendue:
 ['Yoda', 'Obiwan Kenobi', 'Mace Windu']
 
 */
-
 function getJedisNames(characters) {
+  return characters.filter(monde => monde.side === 'light').map(monde => monde.name);
 }
 
+
 module.exports = getJedisNames;
+
+
+
+
